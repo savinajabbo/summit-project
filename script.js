@@ -1,45 +1,3 @@
-// let projects = [
-//     {
-//         "name": "Reva's Pretzel Factory",
-//         "hclubber": "Reva",
-//         "description": "",
-//         "url": ""
-//     },
-//     {
-//         "name": "We can build it",
-//         "hclubber": "Bri",
-//         "description": "",
-//         "url": ""
-//     },
-//     {
-//         "name": "Pickles",
-//         "hclubber": "Bri",
-//         "description": "",
-//         "url": ""
-//     }
-// ]
-function getDate(){
-    var currentDate = new Date();
-    return currentDate.getFullYear() + "-" + (currentDate.getMonth() + 1) + "-" + currentDate.getDate() + " " + currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds()
-}
-class Branch {
-    constructor(name, children = [], parent = null) {
-      this.name = name;
-      this.time = getDate();
-      this.children = children; 
-      this.parent = parent;
-      this.changes = 1;
-    }
-    
-    
-    add_branch(child) {
-      this.children.push(child);
-      child.parent = this; 
-      if(this.parent==null){
-        this.changes++;
-      }
-    }
-}
 
 // let projects = [
 //     {
@@ -79,6 +37,30 @@ class Branch {
 //     });
 // });
 
+
+function getDate(){
+    var currentDate = new Date();
+    return currentDate.getFullYear() + "-" + (currentDate.getMonth() + 1) + "-" + currentDate.getDate() + " " + currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds()
+}
+class Branch {
+    constructor(name, children = [], parent = null) {
+      this.name = name;
+      this.time = getDate();
+      this.children = children; 
+      this.parent = parent;
+      this.changes = 1;
+    }
+    
+    
+    add_branch(child) {
+      this.children.push(child);
+      child.parent = this; 
+      if(this.parent==null){
+        this.changes++;
+      }
+    }
+}
+
 function showProjectPopup() {
     document.getElementById('projectPopup').style.display = 'block';
 }
@@ -108,9 +90,9 @@ function displayProject(projectData) {
 
     // Hardcoded positions for demonstration purposes
     const hardcodedPositions = [
-        { x: 50, y: 50 },
-        { x: 150, y: 100 },
-        { x: 250, y: 150 },
+        { x: 300, y: 65 },
+        { x: 400, y: 70 },
+        { x: 700, y: 80 },
     ];
 
     // Use the hardcoded positions
@@ -191,6 +173,7 @@ const childBranch2 = new Branch("Child Branch 2");
 mainBranch.add_branch(childBranch1);
 childBranch1.add_branch(childBranch2);
 console.log(mainBranch)*/
+
 for(let i = 0; i < projects.length; i++){
         var temp = document.createElement('branch');
         temp.innerText = projects[i]["name"]; //text to be displayed
@@ -210,6 +193,3 @@ for(let i = 0; i < projects.length; i++){
 
         
     }
-
-
-

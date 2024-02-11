@@ -10,7 +10,7 @@
             justify-content: center;
             position: relative;
             height: 100vh;
-            background-color: #8dbb7a;
+            background-image: radial-gradient(circle at center, #4B5036 0, #222214 100%);
         }
         
         #tree .treeTrunk {
@@ -30,8 +30,8 @@
             bottom: 140px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: #3498db;
-            color: #fff;
+            background-color: #D2CBC1;
+            color: #4B5036;
             border: none;
             padding: 10px 20px;
             cursor: pointer;
@@ -42,8 +42,8 @@
             bottom: 140px;
             left: 35%;
             transform: translateX(-50%);
-            background-color: #3498db;
-            color: #fff;
+            background-color: #D2CBC1;
+            color: #4B5036;
             border: none;
             padding: 10px 20px;
             cursor: pointer;
@@ -52,13 +52,14 @@
 
         #projectPopup {
             display: none;
-            position: absolute;
+            position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #fff;
+            background-color: white;
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border: 2px solid #ccc;
+            z-index: 999;
         }
 
         #projectPopup input,
@@ -69,7 +70,7 @@
 
         .circle {
             position: absolute;
-            background-color: #e74c3c; /* Red color for project circles */
+            background-color: #D2CBC1;
             width: 20px;
             height: 20px;
             border-radius: 50%;
@@ -104,7 +105,7 @@ ul {
     padding: 10px;
     cursor: move;
     z-index: 10;
-    background-color: #2196F3;
+    background-color: #D2CBC1;
     color: #fff;
   }
 
@@ -120,7 +121,7 @@ nav {
 
 ul {
     list-style-type: none;
-    background-color: #c7b8a5;
+    background-color: #D2CBC1;
     overflow: hidden;
     padding: 1em;
     padding: 1em 0; /* Adjust padding as needed */
@@ -141,6 +142,6 @@ li a {
 }
   
 li a:hover {
-    background-color: #6f6f2d;
-    border-radius: 50px;
+    background-color: #222214;
+    border-radius: 15px;
 }
