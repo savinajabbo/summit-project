@@ -1,13 +1,27 @@
-html.light{
-
-}
-
-html.dark{
-
+.trunk{
+    background-color: maroon;
+    height: 300px;
+    width: 50px;
 }
 
 .branch{
     height: 16px; 
     background-color: brown; 
     width: 16px;
+    padding: 20px;
+    flex-direction: column;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .drag{
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
+  }
