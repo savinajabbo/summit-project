@@ -23,12 +23,15 @@ function getDate(){
     return currentDate.getFullYear() + "-" + (currentDate.getMonth() + 1) + "-" + currentDate.getDate() + " " + currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds()
 }
 class Branch {
-    constructor(name, children = [], parent = null) {
-      this.name = name;
-      this.time = getDate();
-      this.children = children; 
-      this.parent = parent;
-      this.changes = 1;
+    constructor(name, url, hclubber, description, children = [], parent = null) {
+    this.name = name;
+    this.time = getDate();
+    this.children = children; 
+    this.parent = parent;
+    this.changes = 1;
+    this.url = url;
+    this.hclubber = hclubber;
+    this.root = parent == null
     }
     
     
@@ -41,6 +44,7 @@ class Branch {
     }
 }
 
+
 // let projects = [
 //     {
 //         "name": "Reva's Pretzel Factory",
@@ -49,6 +53,30 @@ class Branch {
 //         "url": ""
 
 // console.log(projects)
+
+let projects = [
+    {
+        /*"name": "Reva's Pretzel Factory",
+        "hclubber": "Reva",
+        "description": "",
+        "url": ""*/
+        branch : new Branch("Reva's Pretzel Factory","","Reva")
+
+    },
+    {
+        "name": "We can build it",
+        "hclubber" : "Bri",
+        "description": "",
+        "url": ""
+
+    },
+    {
+        "name": "Pickles",
+        "hclubber" : "Bri",
+        "description": "",
+        "url": ""
+    }
+]
 
 // let parent = document.getElementById("tree");
 
