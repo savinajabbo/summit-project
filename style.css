@@ -80,3 +80,67 @@
         .circle:hover {
             transform: scale(1.2);
         }
+.trunk{
+    background-color: maroon;
+    height: 300px;
+    width: 50px;
+}
+
+.branch{
+    height: 16px; 
+    background-color: brown; 
+    width: 16px;
+    padding: 20px;
+    flex-direction: column;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .drag{
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
+  }
+
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+
+}
+
+nav {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    background-color: #c7b8a5;
+    overflow: hidden;
+    padding: 1em;
+    padding: 1em 0; /* Adjust padding as needed */
+    margin: 0; /* Remove default margin */
+    width: 100%; /* Expand to the edges of the screen */
+}
+  
+li {
+    display: inline;
+}
+  
+li a {
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+    font-size:1.3em;
+    text-align: center;
+}
+  
+li a:hover {
+    background-color: #6f6f2d;
+    border-radius: 50px;
+}

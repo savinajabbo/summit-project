@@ -18,6 +18,35 @@
 //         "url": ""
 //     }
 // ]
+function getDate(){
+    var currentDate = new Date();
+    return currentDate.getFullYear() + "-" + (currentDate.getMonth() + 1) + "-" + currentDate.getDate() + " " + currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds()
+}
+class Branch {
+    constructor(name, children = [], parent = null) {
+      this.name = name;
+      this.time = getDate();
+      this.children = children; 
+      this.parent = parent;
+      this.changes = 1;
+    }
+    
+    
+    add_branch(child) {
+      this.children.push(child);
+      child.parent = this; 
+      if(this.parent==null){
+        this.changes++;
+      }
+    }
+}
+
+// let projects = [
+//     {
+//         "name": "Reva's Pretzel Factory",
+//         "hclubber": "Reva",
+//         "description": "",
+//         "url": ""
 
 // console.log(projects)
 
@@ -34,15 +63,21 @@
 //     parent.appendChild(temp);
 // }
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Load projects from localStorage on page load
-    const savedProjects = JSON.parse(localStorage.getItem('projects')) || [];
+// document.addEventListener('DOMContentLoaded', function () {
+//     // Load projects from localStorage on page load
+//     const savedProjects = JSON.parse(localStorage.getItem('projects')) || [];
+// }
+// //prints on the console any info
+// console.log(projects) //prints all info from arrays
 
-    // Display saved projects on the tree
-    savedProjects.forEach(function (projectData) {
-        displayProject(projectData);
-    });
-});
+// //let branch = document.getElementById("branch")
+// let parent = document.getElementById("title"); // combines javascript with html
+
+//     // Display saved projects on the tree
+//     savedProjects.forEach(function (projectData) {
+//         displayProject(projectData);
+//     });
+// });
 
 function showProjectPopup() {
     document.getElementById('projectPopup').style.display = 'block';
@@ -129,6 +164,8 @@ function saveCircleToLocalStorage(circleData) {
     localStorage.setItem('circles', JSON.stringify(existingCircles));
 }
 
+var br = document.createElement('br');
+parent.appendChild(br);
 
 function resetTree() {
     // Clear both projects and circles from localStorage
@@ -146,3 +183,33 @@ function resetTree() {
     addProjectBtn.onclick = showProjectPopup;
     parent.appendChild(addProjectBtn);
 }
+
+/*const mainBranch = new Branch("Main Branch");
+const childBranch1 = new Branch("Child Branch 1");
+const childBranch2 = new Branch("Child Branch 2");
+
+mainBranch.add_branch(childBranch1);
+childBranch1.add_branch(childBranch2);
+console.log(mainBranch)*/
+for(let i = 0; i < projects.length; i++){
+        var temp = document.createElement('branch');
+        temp.innerText = projects[i]["name"]; //text to be displayed
+        console.log(temp); //printing the variables
+        temp.style.width = projects[i]["name"].length*40; //setting the width of the branch based on the length of the name variable
+        temp.style.backgroundColor = "#7a522f";
+        temp.style.height = 16;
+        //temp.document.querySelector("#branch");
+
+        var breaker = document.createElement('br');
+        var breake = document.createElement('br');
+
+        parent.appendChild(temp); //in conjunction with line 27
+        parent.appendChild(breaker);
+        parent.appendChild(breake);
+        //temp.classList.add("branch");
+
+        
+    }
+
+
+
