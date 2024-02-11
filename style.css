@@ -145,3 +145,14 @@ li a:hover {
     background-color: #222214;
     border-radius: 15px;
 }
+
+.project_labels {
+    background-color: #8dbb7a;
+    text-align: left;
+    padding: 20px;
+    margin-right: 300px;
+    margin-left: 300px;
+    border-radius: 50px;
+
+}
+
