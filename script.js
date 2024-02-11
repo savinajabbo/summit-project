@@ -37,7 +37,8 @@
 //     });
 // });
 
-
+var numBranches = 1
+var branches = []
 function getDate(){
     var currentDate = new Date();
     return currentDate.getFullYear() + "-" + (currentDate.getMonth() + 1) + "-" + currentDate.getDate() + " " + currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds()
@@ -66,6 +67,7 @@ function showProjectPopup() {
 }
 
 function addProject() {
+    add_branch()
     const projectName = document.getElementById('projectName').value;
     const userName = document.getElementById('userName').value;
     const projectDescription = document.getElementById('projectDescription').value;
@@ -193,3 +195,17 @@ for(let i = 0; i < projects.length; i++){
 
         
     }
+    function add_branch() {
+        branches.push(new Branch(document.getElementById('projectName').value,"", document.getElementById("userName").value, document.getElementById("projectDescription").value ));
+    
+        console.log(branches);
+        var branch_img = document.createElement('img');
+        if (numBranches % 2 == 0){
+            branch_img.src = './images/tree-branch-left.png';
+        }
+        else {
+            branch_img.src = './images/tree-branch-right.png';
+        }
+        var src = document.getElementById("br");
+        src.appendChild(branch_img)
+    } 
