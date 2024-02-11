@@ -1,13 +1,82 @@
-html.light{
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow: hidden;
+        }
+ 
+        #tree {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            height: 100vh;
+            background-color: #8dbb7a;
+        }
+        
+        #tree .treeTrunk {
+            width: 11rem;
 
-}
+        }
+        
+        #tree .treeTrunk img {
+            max-width: 100%;
+            height: auto;
+        }
+        
 
-html.dark{
 
-}
+        #addProjectBtn {
+            position: absolute;
+            bottom: 140px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
 
-.branch{
-    height: 16px; 
-    background-color: brown; 
-    width: 16px;
-}
+        #resetBtn {
+            position: absolute;
+            bottom: 140px;
+            left: 35%;
+            transform: translateX(-50%);
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+
+        }
+
+        #projectPopup {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #projectPopup input,
+        #projectPopup textarea,
+        #projectPopup button {
+            margin-bottom: 10px;
+        }
+
+        .circle {
+            position: absolute;
+            background-color: #e74c3c; /* Red color for project circles */
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .circle:hover {
+            transform: scale(1.2);
+        }

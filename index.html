@@ -1,10 +1,35 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
         <title>Tree</title>
-        
     </head>
     <body>
-        <div id="title" style="text-align: center;"> <h1>Sprout</h1> </div>
+        <p>Sprout</p>
+        <div id="tree">
+            <div class="treeTrunk">
+                <img src="/images/tree-trunk.png" alt="Tree Trunk">
+            </div>
+            <button id="addProjectBtn" onclick="showProjectPopup()">Add Project</button>
+            <button id="resetBtn" onclick="resetTree()">Reset Tree</button>
+    
+            <!-- Project Popup -->
+            <div id="projectPopup">
+                <label for="projectName">Project Name:</label>
+                <input type="text" id="projectName" required>
+    
+                <label for="userName">Your Name:</label>
+                <input type="text" id="userName" required>
+    
+                <label for="projectDescription">Project Description:</label>
+                <textarea id="projectDescription" required></textarea>
+    
+                <button onclick="addProject()">Add Project</button>
+            </div>
+        </div>
+
     </body>
     <script src="./script.js"></script>
-    </html>
+</html>
